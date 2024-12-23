@@ -21,18 +21,23 @@
     margin-top: 30px;
 }
 
+.display-container-big {
+    padding:10px 0px;
+}
+
 .display-container {
     background-color: black;
     flex-grow: 1;
     display: flex;
-    padding: 15px 0;
+    padding: 15px 5px;
 }
 
 .display {
     flex:1;
     color: white;
     font-style: italic;
-    font-size: 3em;
+    font-size: 2.5em;
+    text-align: end;
 }
 
 .button-container {
