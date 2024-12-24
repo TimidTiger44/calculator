@@ -2,8 +2,9 @@ const add = (a,b) => a+b;
 const subtract = (a,b) =>a-b;
 const multiply = (a,b)=> a*b;
 const divide = (a,b) => a/b;
+let total = 0
 const display = document.querySelector(".display")
-const calcButtons = document.querySelectorAll(".button")
+const numberButtons = document.querySelectorAll(".number")
 const clearButton = document.querySelector("#clear")
 
 function clearDisplay(){
@@ -13,6 +14,13 @@ function clearDisplay(){
 clearButton.addEventListener("click", () => {
     clearDisplay();}
 )
+
+numberButtons.forEach(button => {
+    button.addEventListener("click",()=> {
+        total += parseInt(button.textContent)
+    }
+    )    
+})
 
 function addToDisplay(number){
     
