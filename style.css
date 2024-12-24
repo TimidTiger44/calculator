@@ -27,6 +27,7 @@
 .display-container-big {
     padding:10px 0px;
     display: flex;
+    min-height: 90px;
 }
 
 .display-container {
@@ -42,6 +43,7 @@
     font-style: italic;
     font-size: 2.5em;
     text-align: end;
+    min-height: 46px;
 }
 
 .button-container {
