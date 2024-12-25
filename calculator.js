@@ -4,9 +4,9 @@ const multiply = (a,b)=> a*b;
 const divide = (a,b) => a/b;
 
 let flagForDisplayClear = false;
-const num1 = 0;
-const num2 = 0;
-const operators = ["+","-","x","/"]
+let num1 = 0;
+let num2 = 0;
+let operator = ""
 
 const display = document.querySelector(".display")
 const numberButtons = document.querySelectorAll(".number")
@@ -36,6 +36,7 @@ numberButtons.forEach(button => {
 operatorButtons.forEach(button => {
     button.addEventListener("click", () => {
         num1 = parseInt(display.textContent);
+        console.log(num1)
         flagForDisplayClear = true
 
     })
