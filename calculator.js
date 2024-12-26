@@ -84,17 +84,14 @@ operatorButtons.forEach(button => {
             num2 = parseInt(display.textContent)
             num1 = operate(operator,num1,num2)
             display.textContent = num1
-            // let id = event.target.getAttribute('id')
             let operatorObj  = operators.find(obj => obj.id === button.id)
-            // console.log(operatorObj)
             operator = operatorObj.operator
-            // console.log(operator)
         } else {
-
-        num1 = parseInt(display.textContent);
-        console.log(num1);
-        flagForDisplayClear = true;
-        operatorPresent = true;
+            num1 = parseInt(display.textContent);
+            let operatorObj  = operators.find(obj => obj.id === button.id)
+            operator = operatorObj.operator
+            flagForDisplayClear = true;
+            operatorPresent = true;
 
 }})
 })
