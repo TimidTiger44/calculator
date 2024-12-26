@@ -54,6 +54,8 @@ function operate(operator,num1,num2){
 }
 
 equals.addEventListener("click", () => {
+    num2 = parseInt(display.textContent)
+    console.log(num2)
     display.textContent = operate(operator,num1,num2);
     num1 = 0;
     num2 = 0;
