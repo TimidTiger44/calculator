@@ -60,7 +60,7 @@ equals.addEventListener("click", () => {
     num1 = 0;
     num2 = 0;
     operator = "";
-    flagForDisplayClear= false;
+    flagForDisplayClear= true;
     operatorPresent = false;
 
 })
@@ -73,7 +73,7 @@ numberButtons.forEach(button => {
     button.addEventListener("click",()=> {
         if (flagForDisplayClear) {
             display.textContent= ""
-            flagForDisplayClear = false
+            flagForDisplayClear = false;
         }
         display.textContent += button.textContent
     }
@@ -86,16 +86,14 @@ operatorButtons.forEach(button => {
             num2 = parseInt(display.textContent)
             num1 = operate(operator,num1,num2)
             display.textContent = num1
-            let operatorObj  = operators.find(obj => obj.id === button.id)
-            operator = operatorObj.operator
         } else {
             num1 = parseInt(display.textContent);
-            let operatorObj  = operators.find(obj => obj.id === button.id)
-            operator = operatorObj.operator
-            flagForDisplayClear = true;
-            operatorPresent = true;
-
-}})
+        }
+        let operatorObj  = operators.find(obj => obj.id === button.id)
+        operator = operatorObj.operator
+        flagForDisplayClear = true;
+        operatorPresent = true;
+        })
 })
     
 
