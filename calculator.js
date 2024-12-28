@@ -33,6 +33,13 @@ const clearButton = document.querySelector("#clear")
 const equals = document.querySelector("#equals")
 const operatorButtons = document.querySelectorAll(".operator")
 
+function formatResult (result) {
+    let digits = result.toString().length;
+    if (digits>12) {
+        return result.toPrecision(12);
+    }else { return result
+}}
+
 function clearDisplay(){
     display.textContent = "";
     flagForDisplayClear = false;
@@ -44,14 +51,14 @@ function clearDisplay(){
 
 function operate(operator,num1,num2){
     if (operator === "+") {
-        return add(num1,num2)
+        return formatResult(add(num1,num2))
     }else if (operator === "-") {
-        return subtract(num1,num2)
+        return formatResult(subtract(num1,num2))
     }else if (operator === "*") {
-        return multiply(num1,num2)
+        return formatResult(multiply(num1,num2))
     }else if (operator === "/") {
-        return divide(num1,num2)}
-}
+        return formatResult(divide(num1,num2))
+}}
 
 equals.addEventListener("click", () => {
     num2 = parseInt(display.textContent)
